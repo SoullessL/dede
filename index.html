@@ -7,15 +7,15 @@
  <meta name="keywords" content="Petsy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
- <link href="/dede/templets/bettertree/css/bootstrap.css" rel='stylesheet' type='text/css' />
+ <link href="/dedegit/templets/bettertree/css/bootstrap.css" rel='stylesheet' type='text/css' />
  <!-- Custom Theme files -->
- <link href="/dede/templets/bettertree/css/style.css" rel='stylesheet' type='text/css' />
- <script src="/dede/templets/bettertree/js/jquery.min.js"> </script>
+ <link href="/dedegit/templets/bettertree/css/style.css" rel='stylesheet' type='text/css' />
+ <script src="/dedegit/templets/bettertree/js/jquery.min.js"> </script>
  <!--web-fonts-->
  <!--<link href='http://fonts.useso.com/css?family=Lobster|Raleway:500,400,300' rel='stylesheet' type='text/css'>-->
  <!--//we-bfonts-->
- <script type="text/javascript" src="/dede/templets/bettertree/js/move-top.js"></script>
- <script type="text/javascript" src="/dede/templets/bettertree/js/easing.js"></script>
+ <script type="text/javascript" src="/dedegit/templets/bettertree/js/move-top.js"></script>
+ <script type="text/javascript" src="/dedegit/templets/bettertree/js/easing.js"></script>
  <!--/script-->
  <script type="text/javascript">
   jQuery(document).ready(function($) {
@@ -30,69 +30,69 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!--start-header-->
 <div id="home" class="header">
- <script src="/dede/templets/bettertree/js/flexy-menu.js"> </script>
-<link href="/dede/templets/bettertree/css/flexy-menu..css" rel='stylesheet' type='text/css' />
-<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400});});</script>
-<style>body{background: #fff url(img/texture.png) repeat;margin: 0;padding: 0;}.content{margin: 0px 50px 0px 50px;}.flexy-menu{margin: 50px 0 0 0;}a.back{display: inline-block;text-decoration: none;color: #fff;margin: 50px auto;padding: 10px 30px;background: #333;font-family: Segoe UI;}</style>
+ <link href="/dedegit/templets/bettertree/css/nav.css" rel='stylesheet' type='text/css'/>
+<script>
+    $(document).ready(function() {
+        $('.dropdown').hover(
+                function(){
+                    $(this).children('.sub-menu').slideDown(200);
+                },
+                function(){
+                    $(this).children('.sub-menu').slideUp(200);
+                }
+        );
+    }); // end ready
+</script>
+
 <!--start-header-->
-<div class="top-header">
+<div class="top-header" id="wrapper">
     <div class="container">
         <div class="logo">
             <a href="index.html"><h1>Better<span>Tree</span></h1></a>
         </div>
-        <div class="top-menu">
-            <span class="menu"> </span>
-            <ul class="cl-effect-16">
-                <li><a href="index.html" data-hover="Home">Home</a></li>
-                <li><a href="about.html" data-hover="About">About</a></li>
-                <li><a href="typography.html" data-hover="Services">Services</a></li>
-                <li><a href="gallery.html" data-hover="Gallery">Gallery</a></li>
-                <li><a href="blog.html" data-hover="blog">Blog</a></li>
-                <li><a href="contact.html" data-hover="Contact">Contact</a></li>
-                <div class="clearfix"></div>
-            </ul>
+        <!--<div class="top-menu">-->
+        <div>
+            <nav >
+                <ul class="content clearfix">
+                    <li><a href="#">Nav 1</a></li>
+                    <li><a href="#">Nav 2</a></li>
+                    <li class="dropdown">
+                        <a href="#">Nav 3</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Nav 3.1</a></li>
+                            <li><a href="#">Nav 3.2</a></li>
+                            <li><a href="#">Nav 3.3</a></li>
+                            <li class="dropdown">
+                                <a href="#">Nav 3.4</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Nav 3.4.1</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Nav 3.4.2</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Nav 3.4.2.1</a></li>
+                                            <li><a href="#">Nav 3.4.2.2</a></li>
+                                            <li><a href="#">Nav 3.4.2.3</a></li>
+                                            <li><a href="#">Nav 3.4.2.4</a></li>
+                                            <li><a href="#">Nav 3.4.2.5</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Nav 3.4.3</a></li>
+                                    <li><a href="#">Nav 3.4.4</a></li>
+                                    <li><a href="#">Nav 3.4.5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Nav 3.5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Nav 4</a></li>
+                    <li><a href="#">Nav 5</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- script-for-menu -->
-        <script>
-            $("span.menu").click(function(){
-                $(".top-menu ul").slideToggle("slow" , function(){
-                });
-            });
-        </script>
-        <!-- script-for-menu -->
-        <div class="clearfix"> </div>
+        <!--<div class="clearfix"></div>-->
     </div>
 </div>
 
-<div class="content">
-    <ul class="flexy-menu orange">
-        <li class="active"><a href="JavaScript:void(0)"><i class="icon-heart">
-        </i>Home</a></li>
-        <li><a href="JavaScript:void(0)"><i class="icon-cogs"></i>Services</a></li>
-        <li><a href="JavaScript:void(0)"><i class="icon-th"></i>Portfolio</a><ul>
-            <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-            <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-            <li><a href="JavaScript:void(0)">Dropdown item</a><ul>
-                <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-                <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-                <li><a href="JavaScript:void(0)">Dropdown item</a><ul>
-                    <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-                    <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-                    <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-                    <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-                </ul>
-                </li>
-                <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-            </ul>
-            </li>
-            <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-            <li><a href="JavaScript:void(0)">Dropdown item</a></li>
-        </ul>
-        </li>
-        <li><a href="JavaScript:void(0)"><i class="icon-bullhorn"></i>Blog</a></li>
-        <li><a href="JavaScript:void(0)"><i class="icon-envelope"></i>Contact</a></li>
-    </ul>
-</div>
  <div class="banner">
   <div class="container">
    <div id="top" class="callbacks_container">
@@ -103,13 +103,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
        <h4>everything to keep your dog healthy</h4>
       </div>
      </li>
-     <li id="callbacks1_s1" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
+     <li id="callbacks1_s1" class="" style="display: block; float: none; position: relative; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
       <div class="banner-info">
        <h3>Helping you get rid</h3>
        <h4>of your dog's behaviour problem!</h4>
       </div>
      </li>
-     <li id="callbacks1_s2" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
+     <li id="callbacks1_s2" class="" style="display: block; float: none; position: relative; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
       <div class="banner-info">
        <h3>Get to know</h3>
        <h4>everything to keep your dog healthy</h4>
@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </ul>
    </div>
    <!--banner-Slider-->
-   <script src="/dede/templets/bettertree/js/responsiveslides.min.js"></script>
+   <script src="/dedegit/templets/bettertree/js/responsiveslides.min.js"></script>
    <script>
     // You can also use "$(window).load(function() {"
     $(function () {
@@ -180,7 +180,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
  </div>
 </div>
-<div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+<link href="/dedegit/templets/bettertree/css/nav.css" rel='stylesheet' type='text/css'/>
+<script>
+    $(document).ready(function() {
+        $('.dropdown').hover(
+                function(){
+                    $(this).children('.sub-menu').slideDown(200);
+                },
+                function(){
+                    $(this).children('.sub-menu').slideUp(200);
+                }
+        );
+    }); // end ready
+</script>
+
+<!--start-header-->
+<div class="top-header" id="wrapper">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><h1>Better<span>Tree</span></h1></a>
+        </div>
+        <!--<div class="top-menu">-->
+        <div>
+            <nav >
+                <ul class="content clearfix">
+                    <li><a href="#">Nav 1</a></li>
+                    <li><a href="#">Nav 2</a></li>
+                    <li class="dropdown">
+                        <a href="#">Nav 3</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Nav 3.1</a></li>
+                            <li><a href="#">Nav 3.2</a></li>
+                            <li><a href="#">Nav 3.3</a></li>
+                            <li class="dropdown">
+                                <a href="#">Nav 3.4</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Nav 3.4.1</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Nav 3.4.2</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Nav 3.4.2.1</a></li>
+                                            <li><a href="#">Nav 3.4.2.2</a></li>
+                                            <li><a href="#">Nav 3.4.2.3</a></li>
+                                            <li><a href="#">Nav 3.4.2.4</a></li>
+                                            <li><a href="#">Nav 3.4.2.5</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Nav 3.4.3</a></li>
+                                    <li><a href="#">Nav 3.4.4</a></li>
+                                    <li><a href="#">Nav 3.4.5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Nav 3.5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Nav 4</a></li>
+                    <li><a href="#">Nav 5</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--<div class="clearfix"></div>-->
+    </div>
+</div>
+
+
 <!--start-about-->
 <div class="about">
  <div class="container">
