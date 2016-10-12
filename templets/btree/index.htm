@@ -7,15 +7,15 @@
  <meta name="keywords" content="Petsy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
- <link href="/dedegit/templets/bettertree/css/bootstrap.css" rel='stylesheet' type='text/css' />
+ <link href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" rel='stylesheet' type='text/css' />
  <!-- Custom Theme files -->
- <link href="/dedegit/templets/bettertree/css/style.css" rel='stylesheet' type='text/css' />
- <script src="/dedegit/templets/bettertree/js/jquery.min.js"> </script>
+ <link href="{dede:global.cfg_templets_skin/}/css/style.css" rel='stylesheet' type='text/css' />
+ <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"> </script>
  <!--web-fonts-->
  <!--<link href='http://fonts.useso.com/css?family=Lobster|Raleway:500,400,300' rel='stylesheet' type='text/css'>-->
  <!--//we-bfonts-->
- <script type="text/javascript" src="/dedegit/templets/bettertree/js/move-top.js"></script>
- <script type="text/javascript" src="/dedegit/templets/bettertree/js/easing.js"></script>
+ <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/move-top.js"></script>
+ <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/easing.js"></script>
  <!--/script-->
  <script type="text/javascript">
   jQuery(document).ready(function($) {
@@ -30,69 +30,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!--start-header-->
 <div id="home" class="header">
- <link href="/dedegit/templets/bettertree/css/nav.css" rel='stylesheet' type='text/css'/>
-<script>
-    $(document).ready(function() {
-        $('.dropdown').hover(
-                function(){
-                    $(this).children('.sub-menu').slideDown(200);
-                },
-                function(){
-                    $(this).children('.sub-menu').slideUp(200);
-                }
-        );
-    }); // end ready
-</script>
-
-<!--start-header-->
-<div class="top-header" id="wrapper">
-    <div class="container">
-        <div class="logo">
-            <a href="index.html"><h1>Better<span>Tree</span></h1></a>
-        </div>
-        <!--<div class="top-menu">-->
-        <div>
-            <nav >
-                <ul class="content clearfix">
-                    <li><a href="#">Nav 1</a></li>
-                    <li><a href="#">Nav 2</a></li>
-                    <li class="dropdown">
-                        <a href="#">Nav 3</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Nav 3.1</a></li>
-                            <li><a href="#">Nav 3.2</a></li>
-                            <li><a href="#">Nav 3.3</a></li>
-                            <li class="dropdown">
-                                <a href="#">Nav 3.4</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Nav 3.4.1</a></li>
-                                    <li class="dropdown">
-                                        <a href="#">Nav 3.4.2</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Nav 3.4.2.1</a></li>
-                                            <li><a href="#">Nav 3.4.2.2</a></li>
-                                            <li><a href="#">Nav 3.4.2.3</a></li>
-                                            <li><a href="#">Nav 3.4.2.4</a></li>
-                                            <li><a href="#">Nav 3.4.2.5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Nav 3.4.3</a></li>
-                                    <li><a href="#">Nav 3.4.4</a></li>
-                                    <li><a href="#">Nav 3.4.5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Nav 3.5</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Nav 4</a></li>
-                    <li><a href="#">Nav 5</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!--<div class="clearfix"></div>-->
-    </div>
-</div>
-
+ {dede:include filename="bt_nav.htm"/}
  <div class="banner">
   <div class="container">
    <!--<div id="top" class="callbacks_container">-->
@@ -118,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--</ul>-->
    </div>
    <!--&lt;!&ndash;banner-Slider&ndash;&gt;-->
-   <!--<script src="/dedegit/templets/bettertree/js/responsiveslides.min.js"></script>-->
+   <!--<script src="{dede:global.cfg_templets_skin/}/js/responsiveslides.min.js"></script>-->
    <!--<script>-->
     <!--// You can also use "$(window).load(function() {"-->
     <!--$(function () {-->
