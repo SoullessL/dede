@@ -1,3 +1,8 @@
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel='stylesheet' type='text/css' />
 <link href="{dede:global.cfg_templets_skin/}/css/nav.css" rel='stylesheet' type='text/css'/>
 <script>
     $(document).ready(function() {
@@ -13,47 +18,56 @@
 </script>
 
 <!--start-header-->
-<div class="top-header" id="wrapper">
+<div class="top-header" >
     <div class="container">
         <div class="logo">
-            <a href="index.html"><h1>Better<span>Tree</span></h1></a>
+            <a href="/"><h1>Better<span>Tree</span></h1></a>
         </div>
         <!--<div class="top-menu">-->
-        <div>
-            <nav >
+        <div id="navwrapper" >
+            <nav>
                 <ul class="content clearfix">
-                    <li><a href="#">Nav 1</a></li>
-                    <li><a href="#">Nav 2</a></li>
+                    {dede:channelartlist typeid='top' row='7'}
                     <li class="dropdown">
-                        <a href="#">Nav 3</a>
+                        <a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Nav 3.1</a></li>
-                            <li><a href="#">Nav 3.2</a></li>
-                            <li><a href="#">Nav 3.3</a></li>
-                            <li class="dropdown">
-                                <a href="#">Nav 3.4</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Nav 3.4.1</a></li>
-                                    <li class="dropdown">
-                                        <a href="#">Nav 3.4.2</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Nav 3.4.2.1</a></li>
-                                            <li><a href="#">Nav 3.4.2.2</a></li>
-                                            <li><a href="#">Nav 3.4.2.3</a></li>
-                                            <li><a href="#">Nav 3.4.2.4</a></li>
-                                            <li><a href="#">Nav 3.4.2.5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Nav 3.4.3</a></li>
-                                    <li><a href="#">Nav 3.4.4</a></li>
-                                    <li><a href="#">Nav 3.4.5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Nav 3.5</a></li>
+                            {dede:channel type='son' noself='yes'}
+                            <li><a href="[field:typelink/]">[field:typename/]</a></li>
+                            {/dede:channel}
                         </ul>
                     </li>
-                    <li><a href="#">Nav 4</a></li>
-                    <li><a href="#">Nav 5</a></li>
+                    {/dede:channelartlist}
+
+                    <!--<li class="dropdown">-->
+                        <!--<a href="#">Nav 3</a>-->
+                        <!--<ul class="sub-menu">-->
+                            <!--<li><a href="#">Nav 3.1</a></li>-->
+                            <!--<li><a href="#">Nav 3.2</a></li>-->
+                            <!--<li><a href="#">Nav 3.3</a></li>-->
+                            <!--<li class="dropdown">-->
+                                <!--<a href="#">Nav 3.4</a>-->
+                                <!--<ul class="sub-menu">-->
+                                    <!--<li><a href="#">Nav 3.4.1</a></li>-->
+                                    <!--<li class="dropdown">-->
+                                        <!--<a href="#">Nav 3.4.2</a>-->
+                                        <!--<ul class="sub-menu">-->
+                                            <!--<li><a href="#">Nav 3.4.2.1</a></li>-->
+                                            <!--<li><a href="#">Nav 3.4.2.2</a></li>-->
+                                            <!--<li><a href="#">Nav 3.4.2.3</a></li>-->
+                                            <!--<li><a href="#">Nav 3.4.2.4</a></li>-->
+                                            <!--<li><a href="#">Nav 3.4.2.5</a></li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                    <!--<li><a href="#">Nav 3.4.3</a></li>-->
+                                    <!--<li><a href="#">Nav 3.4.4</a></li>-->
+                                    <!--<li><a href="#">Nav 3.4.5</a></li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+                            <!--<li><a href="#">Nav 3.5</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li><a href="#">Nav 4</a></li>-->
+                    <!--<li><a href="#">Nav 5</a></li>-->
                 </ul>
             </nav>
         </div>

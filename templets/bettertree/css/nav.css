@@ -1,11 +1,12 @@
 /* =Styles for the lab
 -------------------------------------------------------------- */
-#wrapper {
-	min-width:1000px;
+#navwrapper {
+	min-width:800px;
     font-family: 'Lobster', cursive;
+    float:right;
 }
 nav {
-	padding:10px 0;
+	padding:10px 0 0 20px;
 }
 nav ul {
     list-style-type:none;
@@ -19,11 +20,11 @@ nav ul li {
 
 /* sub navigation */
 nav li ul {    
-    background-color:rgb(225,75,75);
+    background-color:#1e88a8;
     position:absolute;
     left:0;
     top:40px; /* make this equal to the line-height of the links (specified below) */
-    width:200px;
+    width:180px;
 }
 nav li li {
     position:relative;
@@ -33,7 +34,7 @@ nav li li {
 nav li li ul {
     position:absolute;
     top:0;
-    left:200px; /* make this equal to the width of the sub nav above */
+    left:180px; /* make this equal to the width of the sub nav above */
     margin:0;
 }
 
@@ -56,7 +57,7 @@ nav a:active {
 
 /* style sub level links */
 nav li li a {
-    border-bottom:solid 1px rgb(200,50,50);
+    border-bottom:solid 1px #2ad2c9;
     margin:0 10px;
     padding:0;
 }
