@@ -1,208 +1,88 @@
 <!DOCTYPE HTML>
 <html>
 <head>
- <title>Home</title>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
- <meta name="keywords" content="Petsy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
- <link href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" rel='stylesheet' type='text/css' />
- <!-- Custom Theme files -->
- <link href="{dede:global.cfg_templets_skin/}/css/style.css" rel='stylesheet' type='text/css' />
- <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"> </script>
- <!--web-fonts-->
- <!--<link href='http://fonts.useso.com/css?family=Lobster|Raleway:500,400,300' rel='stylesheet' type='text/css'>-->
- <!--//we-bfonts-->
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Petsy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <link href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <!-- Custom Theme files -->
+    <link href="{dede:global.cfg_templets_skin/}/css/style.css" rel='stylesheet' type='text/css'/>
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <!--web-fonts-->
+    <!--<link href='http://fonts.useso.com/css?family=Lobster|Raleway:500,400,300' rel='stylesheet' type='text/css'>-->
+    <!--//we-bfonts-->
 
- <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/move-top.js"></script>
- <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/easing.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/move-top.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/easing.js"></script>
 
 </head>
 <body>
 <!--start-header-->
 <div id="home" class="header two">
- {dede:include filename="bt_nav.htm"/}
- </div>
+    {dede:include filename="bt_nav.htm"/}
+</div>
 <!-- /header -->
 
 
-<div >
- <div class="container">
- <div class="grid_3 grid_5">
-  <ol class="breadcrumb">
-   {dede:field name='position'/}
-  </ol>
- </div>
-  </div>
+<div class="extendBottom">
+    <div class="container">
+        <div class="grid_3 grid_5">
+            <ol class="breadcrumb">
+                {dede:field name='position'/}
+            </ol>
+        </div>
+        <div>
+            <div class="col-md-9 about-top-right">
+                <div class="team-grids">
+                    <ul class="ch-grid">
+                        {dede:list pagesize='9'}
+                        <li style="float: left">
+                            <a href="[field:arcurl/]">
+                                <div class="ch-item" style='background-image: url([field:picname/])'>
+                                    <div class="ch-info-wrap">
+                                        <div class="ch-info">
+                                            <div class="ch-info-front" style='background-image: url([field:picname/])'></div>
+                                            <div class="ch-info-back">
+                                                <h3>[field:title/]</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        {/dede:list}
+                    </ul>
+                </div>
+                <!--start-blog-pagenate-->
+                <div class="blog-pagenat">
+                    <ul>
+                        {dede:pagelist listitem="index,end,pre,next,pageno" listsize="2"/}
+                        <div class="clearfix"></div>
+                    </ul>
+                </div>
+                <!--//End-blog-pagenate-->
+            </div>
+            <div class="col-md-3 about-top-left">
+                <div class="list-group list-group-alternate">
+                    {dede:channel type='son'}
+                    <a href="[field:typeurl/]" class="list-group-item">
+                        [field:typename/]
+                    </a>
+                    {/dede:channel}
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 </div>
-
-
-<div class="w960 center clear mt1">
- <div class="pleft">
-  <div class="place"> <strong>当前位置:</strong> {dede:field name='position'/} </div>
-  <!-- /place -->
-  <div class="listbox">
-   <ul class="e2">
-    {dede:list pagesize='10'}
-    <li> [field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' class='preview'><img src='{@me['litpic']}'/></a>"); [/field:array]
-     [<b>[field:typelink/]</b>] <a href="[field:arcurl/]" class="title">[field:title/]</a> <span class="info"> <small>日期：</small>[field:pubdate function="GetDateTimeMK(@me)"/] <small>点击：</small>[field:click/] <small>好评：</small>[field:scores/] </span>
-     <p class="intro"> [field:description/]... </p>
-    </li>
-    {/dede:list}
-   </ul>
-  </div>
-  <!-- /listbox -->
-  <div class="dede_pages">
-   <ul class="pagelist">
-    {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
-   </ul>
-  </div>
-  <!-- /pages -->
- </div>
- <!-- /pleft -->
- <div class="pright">
-  <div>
-   <dl class="tbox">
-    <dt><strong>栏目列表</strong></dt>
-    <dd>
-     <ul class="d6">
-      {dede:channel type='son' currentstyle="
-      <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
-      "}
-      <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
-      {/dede:channel}
-     </ul>
-    </dd>
-   </dl>
-  </div>
-  <div  style="margin:10px auto">{dede:myad name='listRtPicAD'/}</div>
-  <div class="commend">
-   <dl class="tbox light">
-    <dt class='light'><strong>推荐内容</strong></dt>
-    <dd class='light'>
-     <ul class="d4">
-      {dede:arclist flag='c' titlelen=42 row=6}
-      <li><a href="[field:arcurl/]">[field:title/]</a>
-       <p>[field:description function='cn_substr(@me,80)'/]...</p>
-      </li>
-      {/dede:arclist}
-     </ul>
-    </dd>
-   </dl>
-  </div>
-  <!-- /commend -->
-  <div class="hot mt1 light">
-   <dl class="tbox">
-    <dt class='light'><strong>热点内容</strong></dt>
-    <dd class='light'>
-     <ul class="c1 ico2">
-      {dede:arclist row=10 orderby=click}
-      <li><a href="[field:arcurl/]">[field:title/]</a></li>
-      {/dede:arclist}
-     </ul>
-    </dd>
-   </dl>
-  </div>
-  {dede:qrcode/}
-  <div  style="margin:10px auto">{dede:myad name='listRtPicAD2'/}</div>
- </div>
- <!-- /pright -->
-</div>
-<div class="pright">
- <div>
-  <dl class="tbox">
-   <dt><strong>栏目列表</strong></dt>
-   <dd>
-    <ul class="d6">
-     {dede:channel type='son' currentstyle="
-     <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
-     "}
-     <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
-     {/dede:channel}
-    </ul>
-   </dd>
-  </dl>
- </div>
- <div  style="margin:10px auto">{dede:myad name='listRtPicAD'/}</div>
- <div class="commend">
-  <dl class="tbox light">
-   <dt class='light'><strong>推荐内容</strong></dt>
-   <dd class='light'>
-    <ul class="d4">
-     {dede:arclist flag='c' titlelen=42 row=6}
-     <li><a href="[field:arcurl/]">[field:title/]</a>
-      <p>[field:description function='cn_substr(@me,80)'/]...</p>
-     </li>
-     {/dede:arclist}
-    </ul>
-   </dd>
-  </dl>
- </div>
- <!-- /commend -->
- <div class="hot mt1 light">
-  <dl class="tbox">
-   <dt class='light'><strong>热点内容</strong></dt>
-   <dd class='light'>
-    <ul class="c1 ico2">
-     {dede:arclist row=10 orderby=click}
-     <li><a href="[field:arcurl/]">[field:title/]</a></li>
-     {/dede:arclist}
-    </ul>
-   </dd>
-  </dl>
- </div>
- {dede:qrcode/}
- <div  style="margin:10px auto">{dede:myad name='listRtPicAD2'/}</div>
-</div>
-<!-- /pright -->
-</div> <div class="pright">
- <div>
-  <dl class="tbox">
-   <dt><strong>栏目列表</strong></dt>
-   <dd>
-    <ul class="d6">
-     {dede:channel type='son' currentstyle="
-     <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
-     "}
-     <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
-     {/dede:channel}
-    </ul>
-   </dd>
-  </dl>
- </div>
- <div id="listRtPicAD" style="margin:10px auto">{dede:myad name='listRtPicAD'/}</div>
- <div class="commend">
-  <dl class="tbox light">
-   <dt class='light'><strong>推荐内容</strong></dt>
-   <dd class='light'>
-    <ul class="d4">
-     {dede:arclist flag='c' titlelen=42 row=6}
-     <li><a href="[field:arcurl/]">[field:title/]</a>
-      <p>[field:description function='cn_substr(@me,80)'/]...</p>
-     </li>
-     {/dede:arclist}
-    </ul>
-   </dd>
-  </dl>
- </div>
- <!-- /commend -->
- <div class="hot mt1 light">
-  <dl class="tbox">
-   <dt class='light'><strong>热点内容</strong></dt>
-   <dd class='light'>
-    <ul class="c1 ico2">
-     {dede:arclist row=10 orderby=click}
-     <li><a href="[field:arcurl/]">[field:title/]</a></li>
-     {/dede:arclist}
-    </ul>
-   </dd>
-  </dl>
- </div>
- {dede:qrcode/}
- <div id="listRtPicAD2" style="margin:10px auto">{dede:myad name='listRtPicAD2'/}</div>
-</div>
-<!-- /pright -->
-</div>
+<svg id="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100"
+     viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path id="trianglePath5" d="M0 0 L50 100 L100 0 Z"></path>
+    <path id="trianglePath6" d="M50 100 L100 40 L100 0 Z"></path>
+</svg>
 
 {dede:include filename="bt_foot.htm"/}
 
