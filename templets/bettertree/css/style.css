@@ -42,9 +42,141 @@ label {
     margin: 0;
 }
 
-.extendBottom{
+.extendBottom {
     padding-bottom: 0px;
 }
+
+.categories ul {
+    padding: 0;
+    margin: 0;
+}
+
+.categories ul li {
+    list-style-type: none;
+    background: url(../images/333.png) no-repeat 0px 7px;
+    display: block;
+    padding-left: 20px;
+    margin: 1em 0;
+    color: #343434;
+    font-size: 15px;
+}
+
+.categories h3 {
+    margin-bottom: 0em !important;
+    padding-bottom: 0;
+}
+
+.categories ul li a {
+    color: #020202;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.categories ul li a:hover {
+    text-decoration: none;
+    color: #2ad2c9;
+    padding-left: 1em;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.related-post-left {
+    float: left;
+    width: 30%;
+}
+
+.related-post-right {
+    float: right;
+    width: 65%;
+}
+
+.related-post-right h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.related-posts h3 {
+    margin-bottom: 1em !important;
+}
+
+.related-post {
+    margin: 2em 0;
+}
+
+.related-post-right h4 {
+    margin: 0 0 .5em;
+}
+
+.related-post-right h4 a {
+    font-family: 'Roboto Slab', serif;
+    color: #2ad2c9;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.related-post-right h4 a:hover {
+    text-decoration: none;
+    color: #2ad2c9;
+}
+
+.related-post-right p {
+    margin: 0;
+    color: #020202;
+    font-size: 13px;
+    line-height: 1.8em;
+}
+
+.related-post-left img {
+    width: 80px;
+    height: 80px;
+}
+
+.autoWapp {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.news-grids {
+    /*margin-top: 50px;*/
+}
+.news-grid{
+    padding-bottom: 20px;
+}
+.news-grid img {
+    width: 200px;
+    height: 150px;
+}
+
+.news-grid a h4 {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px 0;
+    font-size: 18px;
+    color: #2ad2c9;
+    font-family: 'Roboto Slab', serif;
+}
+
+.news-grid a:hover {
+    text-decoration: none;
+}
+
+.news-grid span {
+    color: #C3C2C2;
+    font-size: 14px;
+    line-height: 1.7em;
+    display: block;
+    margin: 3px 0 8px 0;
+}
+
 /*--header--*/
 .top-header {
     padding: 2em 0 0 0;
@@ -491,6 +623,59 @@ h3.tittle {
     font-size: 3em;
     font-weight: 400;
     color: #2ad2c9;
+}
+
+h4.tittle {
+    font-size: 2em;
+    font-weight: 300;
+    color: #2ad2c9;
+}
+
+.jaylist {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.jaylist li {
+    line-height: 30px;
+}
+
+.jaylist a {
+    color: #2ad2c9;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.jaytext:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #2ad2c9;
+    transition: all .3s;
+    -moz-transition: width .3s; /* Firefox 4 */
+    -webkit-transition: width .3s; /* Safari and Chrome */
+}
+
+.jaytext:hover:before {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.about-top-right p a {
+    font-size: 20px;
+    color: blue;
+    text-decoration: underline;
+}
+
+.about-top-right p a:hover {
+    font-size: 20px;
+    color: #2ad2c9;
+    text-decoration: underline;
 }
 
 .about-top {
