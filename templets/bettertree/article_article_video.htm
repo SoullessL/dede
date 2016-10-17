@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Home</title>
+    <title>{dede:field.title/}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Petsy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -16,6 +16,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/move-top.js"></script>
     <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/easing.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_indexurl/}/CuPlayer/images/swfobject.js"></script>
+
 
 </head>
 <body>
@@ -25,7 +27,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- /header -->
 
-
 <div class="extendBottom">
     <div class="container">
         <div class="grid_3 grid_5">
@@ -34,64 +35,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ol>
         </div>
         <div>
-            <div class="col-md-8 about-top-right">
-                <div class="team-grids">
-                    <ul class="ch-grid">
-                        {dede:list pagesize='9'}
-                        <li style="float: left">
-                            <a href="[field:arcurl/]">
-                                <div class="ch-item">
-                                    <div class="ch-info-wrap">
-                                        <div class="ch-info">
-                                            <div class="ch-info-front"
-                                                 style='background-image: url([field:picname/])'></div>
-                                            <div class="ch-info-back autoWapp">
-                                                <h3>[field:title function='cn_substr(@me,48)'/]</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        {/dede:list}
-                    </ul>
-                </div>
-                <!--<div class="news-grids">-->
-                    <!--{dede:list pagesize='9'}-->
-                    <!--<div class="col-md-4 news-grid mask">-->
-                        <!--<a href="[field:arcurl/]"><h4>[field:title/]</h4></a>-->
-                        <!--<a href="[field:arcurl/]" class="mask">-->
-                            <!--<img src="[field:picname/]" alt="image" class="img-responsive zoom-img"></a>-->
-                    <!--</div>-->
-
-                    <!--&lt;!&ndash;<li style="float: left">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a href="[field:arcurl/]">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-item" style='background-image: url([field:picname/])'>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-info-wrap">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-info">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-info-front"&ndash;&gt;-->
-                    <!--&lt;!&ndash;style='background-image: url([field:picname/])'></div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-info-back">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<h3>[field:title/]</h3>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</li>&ndash;&gt;-->
-                    <!--{/dede:list}-->
-
-                    <!--<div class="clearfix"></div>-->
-                <!--</div>-->
-
-                <!--start-blog-pagenate-->
-                <div class="blog-pagenat">
-                    <ul>
-                        {dede:pagelist listitem="index,end,pre,next,pageno" listsize="2"/}
-                        <div class="clearfix"></div>
-                    </ul>
-                </div>
-                <!--//End-blog-pagenate-->
+            <div class="col-md-8 about-top-right" style="padding-bottom: 30px">
+                <h3 class="tittle autoWapp">{dede:field.title/}</h3>
+                <p class="autoWapp">{dede:field.body/}
+                </p>
+                <div class="video" id="CuPlayer" style="width:600px;margin:0 auto;margin-top:20px;">
+                    Please update your flash player!</div>
             </div>
             <div class="col-md-4 about-top-left">
                 <div class="categories" style="padding-left: 50px">
@@ -141,7 +90,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <path id="trianglePath5" d="M0 0 L50 100 L100 0 Z"></path>
     <path id="trianglePath6" d="M50 100 L100 40 L100 0 Z"></path>
 </svg>
-
+<script type="text/javascript">
+    var so = new SWFObject("{dede:global.cfg_indexurl/}/CuPlayer/CuPlayerMiniV4.swf", "CuPlayerV4", "600", "410", "9", "#000000");
+    so.addParam("allowfullscreen", "true");
+    so.addParam("allowscriptaccess", "always");
+    so.addParam("wmode", "opaque");
+    so.addParam("quality", "high");
+    so.addParam("salign", "lt");
+    so.addVariable("CuPlayerSetFile", "{dede:global.cfg_indexurl/}/CuPlayer/CuPlayerSetFile.xml");
+    so.addVariable("CuPlayerFile", "{dede:field.flvurl/}");
+    so.addVariable("CuPlayerWidth", "600");
+    so.addVariable("CuPlayerHeight", "410");
+    so.addVariable("CuPlayerAutoPlay", "no");
+    so.addVariable("CuPlayerImage", "{dede:global.cfg_indexurl/}/CuPlayer/images/video.png");
+    so.addVariable("CuPlayerPosition", "bottom-right");
+    so.write("CuPlayer");
+</script>
 {dede:include filename="bt_foot.htm"/}
 
 </body>

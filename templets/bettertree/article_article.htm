@@ -34,8 +34,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ol>
         </div>
         <div>
-            <div class="col-md-8 about-top-right">
-                <h3 class="tittle">{dede:field.title/}</h3>
+            <div class="col-md-8 about-top-right" style="padding-bottom: 30px">
+                <h3 class="tittle autoWapp">{dede:field.title/}</h3>
                 <p class="autoWapp">{dede:field.body/}</p>
             </div>
             <div class="col-md-4 about-top-left">
@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="[field:arcurl/]"><img src="[field:picname/]" class="img-responsive"/></a>
                         </div>
                         <div class="related-post-right">
-                            <h4><a href="[field:arcurl/]">[field:title/]</a></h4>
+                            <h4><a href="[field:arcurl/]">[field:title function='cn_substr(@me,24)'/]</a></h4>
                             <p class="autoWapp">
                                 [field:info function='cn_substr(@me,65)'/]
                             </p>

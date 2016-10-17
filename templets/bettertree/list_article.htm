@@ -35,23 +35,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div>
             <div class="col-md-8 about-top-right">
-                <div>
-                    <table class="table table-hover">
-                        <colgroup>
-                            <col class="col-md-6">
-                            <col class="col-md-2">
-                        </colgroup>
-                        <tbody>
+                <!--<div>-->
+                    <!--<table class="table table-hover">-->
+                        <!--<colgroup>-->
+                            <!--<col class="col-md-6">-->
+                            <!--<col class="col-md-2">-->
+                        <!--</colgroup>-->
+                        <!--<tbody>-->
+                        <!--{dede:list pagesize='10'}-->
+                        <!--<tr>-->
+                            <!--<td><a href="[field:arcurl/]" class="title">[field:title/]</a></td>-->
+                            <!--<td>[field:pubdate function="GetDateMK(@me)"/]</td>-->
+                        <!--</tr>-->
+                        <!--{/dede:list}-->
+                        <!--</tbody>-->
+                    <!--</table>-->
+                    <div class="list-group list-group-alternate jaylist">
                         {dede:list pagesize='10'}
-                        <tr>
-                            <td><a href="[field:arcurl/]" class="title">[field:title/]</a></td>
-                            <td>[field:pubdate function="GetDateMK(@me)"/]</td>
-                        </tr>
+                        <a href="[field:arcurl/]" class="list-group-item">[[field:pubdate
+                            function="GetDateMK(@me)"/]]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[field:title/]</a>
+
                         {/dede:list}
-                        </tbody>
-                    </table>
+                    </div>
                     <div class="clearfix"></div>
-                </div>
+                <!--</div>-->
                 <!--start-blog-pagenate-->
                 <div class="blog-pagenat">
                     <ul>
@@ -89,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="[field:arcurl/]"><img src="[field:picname/]" class="img-responsive"/></a>
                         </div>
                         <div class="related-post-right">
-                            <h4><a href="[field:arcurl/]">[field:title/]</a></h4>
+                            <h4><a href="[field:arcurl/]">[field:title function='cn_substr(@me,24)'/]</a></h4>
                             <p class="autoWapp">
                                 [field:info function='cn_substr(@me,65)'/]
                             </p>
