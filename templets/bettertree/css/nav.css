@@ -68,6 +68,7 @@ nav li li:last-child a {
 /* hide sub menu links */
 ul.sub-menu {
     display:none;
+    font-size: 12px;
 }
 
 /* show arrows for dropdowns */
