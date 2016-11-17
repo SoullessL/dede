@@ -2,8 +2,8 @@
 -------------------------------------------------------------- */
 #navwrapper {
 	min-width:800px;
-    font-family: 'Lobster', cursive;
-    float:right;
+    /*font-family: 'Lobster', cursive;
+    float:right;*/
 }
 nav {
 	padding:10px 0 0 20px;
@@ -20,7 +20,7 @@ nav ul li {
 
 /* sub navigation */
 nav li ul {    
-    background-color:#1e88a8;
+    background-color:#424844;
     position:absolute;
     left:0;
     top:40px; /* make this equal to the line-height of the links (specified below) */
@@ -52,12 +52,12 @@ nav a {
 nav a:hover,
 nav a:focus,
 nav a:active {
-    color:#2ad2c9;
+    color:#4e9659;
 }
 
 /* style sub level links */
 nav li li a {
-    border-bottom:solid 1px #2ad2c9;
+    border-bottom:solid 1px #4e9659;
     margin:0 10px;
     padding:0;
 }

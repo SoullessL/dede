@@ -40,7 +40,7 @@ input[type="button"], input[type="submit"], .port-grid, .text p, .text h3 {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    font-family: 'Lobster', cursive;
+    /*font-family: 'Lobster', cursive;*/
 }
 
 p {
@@ -67,9 +67,11 @@ label {
 
 .categories ul li {
     list-style-type: none;
+    /*
     background: url(../images/333.png) no-repeat 0px 7px;
-    display: block;
     padding-left: 20px;
+    */
+    display: block;    
     margin: 1em 0;
     color: #343434;
     font-size: 15px;
@@ -93,7 +95,7 @@ label {
 
 .categories ul li a:hover {
     text-decoration: none;
-    color: #2ad2c9;
+    color: #4e9659;
     padding-left: 1em;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -131,7 +133,7 @@ label {
 
 .related-post-right h4 a {
     font-family: 'Roboto Slab', serif;
-    color: #2ad2c9;
+    color: #4e9659;
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
@@ -139,7 +141,7 @@ label {
 
 .related-post-right h4 a:hover {
     text-decoration: none;
-    color: #2ad2c9;
+    color: #4e9659;
 }
 
 .related-post-right p {
@@ -177,7 +179,7 @@ label {
     text-transform: uppercase;
     margin: 0px 0;
     font-size: 18px;
-    color: #2ad2c9;
+    color: #4e9659;
     font-family: 'Roboto Slab', serif;
 }
 
@@ -194,11 +196,11 @@ label {
 }
 
 .jaylist a:hover{
-    color: #2ad2c9;
+    color: #4e9659;
 }
 
 .textBlue{
-    color: #2ad2c9;
+    color: #4e9659;
 }
 
 /*--header--*/
@@ -209,17 +211,19 @@ label {
 .logo {
     float: left;
     text-align: center;
+    background:url("../images/logo.png") no-repeat;
 }
 
 .logo a h1 {
-    font-size: 3.3em;
+    font-size: 2.5em;
     font-weight: 400;
-    color: #2ad2c9;
+    color: #4e9659;
     font-family: 'Lobster', cursive;
+    margin-left: 50px;
 }
 
 .logo a h1:hover {
-    color: #2ad2c9;
+    color: #4e9659;
     text-decoration: none;
 }
 
@@ -263,7 +267,7 @@ label {
 }
 
 .top-menu li a.active {
-    color: #2ad2c9;
+    color: #4e9659;
 }
 
 /* Effect 16: fall down */
@@ -272,7 +276,7 @@ label {
 }
 
 .cl-effect-16 a::before {
-    color: #2ad2c9;
+    color: #4e9659;
     content: attr(data-hover);
     position: absolute;
     opacity: 0;
@@ -563,8 +567,8 @@ label {
 }
 
 .callbacks_here a:after {
-    background: #2ad2c9;
-    border: 2px solid #2ad2c9;
+    background: #4e9659;
+    border: 2px solid #4e9659;
 }
 
 .banner-info {
@@ -581,7 +585,7 @@ label {
 .banner-info h4 {
     font-size: 2em;
     font-weight: 400;
-    color: #2ad2c9;
+    color: #4e9659;
     margin: 0.3em 0;
 }
 
@@ -606,7 +610,7 @@ label {
 }
 
 .banner-grid.three {
-    background: #2ad2c9;
+    background: #4e9659;
 }
 
 .icon-text h4 {
@@ -646,24 +650,24 @@ label {
 h3.tittle {
     font-size: 3em;
     font-weight: 400;
-    color: #2ad2c9;
+    color: #4e9659;
 }
 
 h4.tittle {
     font-size: 2em;
-    font-weight: 300;
-    color: #2ad2c9;
+    font-weight: 400;
+    color: #4e9659;
 }
 
 .about-top-right p a {
     font-size: 20px;
-    color: blue;
-    text-decoration: underline;
+    /*color: blue;
+    text-decoration: underline;*/
 }
 
 .about-top-right p a:hover {
     font-size: 20px;
-    color: #2ad2c9;
+    color: #4e9659;
     text-decoration: underline;
 }
 
@@ -789,7 +793,7 @@ h4.tittle {
 .ch-info .ch-info-back {
     opacity: 0;
 
-    background: #2ad2c9;
+    background: #4e9659;
     pointer-events: none;
 
     -webkit-transform: scale(1.5);
@@ -1129,25 +1133,25 @@ ul.ad-info li a {
 }
 
 .blog-pagenat ul li a:hover {
-    background: #2ad2c9;
+    background: #4e9659;
     color: #fff;
-    border: 1px solid #2ad2c9;
+    border: 1px solid #4e9659;
 }
 
 .blog-pagenat ul li .current {
-    background: #2ad2c9;
+    background: #4e9659;
     color: #fff;
-    border: 1px solid #2ad2c9;
+    border: 1px solid #4e9659;
 }
 
 ul.ad-info.two li a {
-    color: #2ad2c9;
+    color: #4e9659;
 
 }
 
 /*--single--*/
 .leave h4, h4.tz-title-4.tzcolor-blue {
-    color: #2ad2c9;
+    color: #4e9659;
     font-size: 2.2em;
     font-weight: 400;
     margin-top: 0.5em;
@@ -1206,7 +1210,7 @@ span.m_14 {
     font-weight: 400;
     text-transform: capitalize;
     font-size: 0.9em;
-    color: #2ad2c9;
+    color: #4e9659;
 }
 
 .single_grid2 p {
@@ -1253,7 +1257,7 @@ h5.m_26 a {
 }
 
 h5.m_26 a:hover {
-    background: #2ad2c9;
+    background: #4e9659;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -1298,7 +1302,7 @@ h5.m_26 a:hover {
 }
 
 .leave input[type="submit"]:hover {
-    background: #2ad2c9;
+    background: #4e9659;
 }
 
 .leave p {
@@ -1408,7 +1412,11 @@ h5.m_26 a:hover {
 .grid_3 h3 {
     padding-bottom: .5em;
     font-size: 2em;
-    color: #FA0000;
+    color: #4e9659;
+}
+
+.grid_5 .breadcrumb a:hover {
+    color: #4e9659;
 }
 
 .grid_4 h3 {
@@ -1544,7 +1552,7 @@ p.para1 {
 }
 
 .send input[type="submit"]:hover {
-    background: #2ad2c9;
+    background: #4e9659;
 }
 
 /*--footer--*/
@@ -1623,7 +1631,7 @@ a:hover.tooltips span {
 }
 
 .copy p a {
-    color: #2ad2c9;
+    color: #4e9659;
 }
 
 .copy p a:hover {
@@ -2296,7 +2304,7 @@ a:hover.tooltips span {
     }
 
     .logo a h1 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     .typography {
