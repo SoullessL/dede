@@ -73,8 +73,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
             <div class="col-md-9 about-top-right" style="padding-bottom: 30px">
-                <h3 class="tittle autoWapp">{dede:field.title/}</h3>
-                <p class="autoWapp">{dede:field.body/}</p>
+                {dede:sql sql="SELECT id,typeid,title FROM `dede_archives` where typeid=~typeid~ ORDER BY `id` DESC LIMIT 0 , 1"}
+                <h3 class="tittle autoWapp">[field:title /]</h3>
+                {/dede:sql}
+                {dede:sql sql="SELECT aid,typeid,body FROM `dede_addonarticle` where typeid=~typeid~ ORDER BY `aid` DESC LIMIT 0 , 1"}
+                <p class="autoWapp">[field:body /]</p>
+                {/dede:sql}
             </div>
             <div class="clearfix"></div>
         </div>

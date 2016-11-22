@@ -34,7 +34,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ol>
         </div>
         <div>
-            <div class="col-md-8 about-top-right">
+            <div class="col-md-3 about-top-left">
+                <div class="categories">
+                    <h4 class="tittle">{dede:field name='typename' /}</h4>
+                    <ul>
+                        {dede:channel type='son'}
+                        <li>
+                            <a href="[field:typeurl/]">
+                                [field:typename/]
+                            </a>
+                        </li>
+                        {/dede:channel}
+                    </ul>
+                </div>
+                <!--<div class="list-group list-group-alternate">-->
+                <!--{dede:channel type='son'}-->
+                <!--<a href="[field:typeurl/]" class="list-group-item">-->
+                <!--[field:typename/]-->
+                <!--</a>-->
+                <!--{/dede:channel}-->
+                <!--</div>-->
+                <div class="related-posts">
+                    <h4 class="tittle">Pictures</h4>
+                    {dede:arclist typeid='30' row=2}
+                    <div class="related-post">
+                        <div class="related-post-left">
+                            <a href="[field:arcurl/]"><img src="[field:picname/]" class="img-responsive"/></a>
+                        </div>
+                        <div class="related-post-right">
+                            <h4><a href="[field:arcurl/]">[field:title function='cn_substr(@me,24)'/]</a></h4>
+                            <p class="autoWapp">
+                                [field:info function='cn_substr(@me,65)'/]
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    {/dede:arclist}
+                </div>
+            </div>
+            <div class="col-md-9 about-top-right">
                 <div class="team-grids">
                     <ul class="ch-grid">
                         {dede:list pagesize='9'}
@@ -57,31 +95,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                 </div>
                 <!--<div class="news-grids">-->
-                    <!--{dede:list pagesize='9'}-->
-                    <!--<div class="col-md-4 news-grid mask">-->
-                        <!--<a href="[field:arcurl/]"><h4>[field:title/]</h4></a>-->
-                        <!--<a href="[field:arcurl/]" class="mask">-->
-                            <!--<img src="[field:picname/]" alt="image" class="img-responsive zoom-img"></a>-->
-                    <!--</div>-->
+                <!--{dede:list pagesize='9'}-->
+                <!--<div class="col-md-4 news-grid mask">-->
+                <!--<a href="[field:arcurl/]"><h4>[field:title/]</h4></a>-->
+                <!--<a href="[field:arcurl/]" class="mask">-->
+                <!--<img src="[field:picname/]" alt="image" class="img-responsive zoom-img"></a>-->
+                <!--</div>-->
 
-                    <!--&lt;!&ndash;<li style="float: left">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a href="[field:arcurl/]">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-item" style='background-image: url([field:picname/])'>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-info-wrap">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-info">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-info-front"&ndash;&gt;-->
-                    <!--&lt;!&ndash;style='background-image: url([field:picname/])'></div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="ch-info-back">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<h3>[field:title/]</h3>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</li>&ndash;&gt;-->
-                    <!--{/dede:list}-->
+                <!--&lt;!&ndash;<li style="float: left">&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="[field:arcurl/]">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="ch-item" style='background-image: url([field:picname/])'>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="ch-info-wrap">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="ch-info">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="ch-info-front"&ndash;&gt;-->
+                <!--&lt;!&ndash;style='background-image: url([field:picname/])'></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="ch-info-back">&ndash;&gt;-->
+                <!--&lt;!&ndash;<h3>[field:title/]</h3>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                <!--{/dede:list}-->
 
-                    <!--<div class="clearfix"></div>-->
+                <!--<div class="clearfix"></div>-->
                 <!--</div>-->
 
                 <!--start-blog-pagenate-->
@@ -92,44 +130,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                 </div>
                 <!--//End-blog-pagenate-->
-            </div>
-            <div class="col-md-4 about-top-left">
-                <div class="categories" style="padding-left: 50px">
-                    <h4 class="tittle">{dede:field name='typename' /}</h4>
-                    <ul>
-                        {dede:channel type='son'}
-                        <li>
-                            <a href="[field:typeurl/]">
-                                [field:typename/]
-                            </a>
-                        </li>
-                        {/dede:channel}
-                    </ul>
-                </div>
-                <!--<div class="list-group list-group-alternate">-->
-                <!--{dede:channel type='son'}-->
-                <!--<a href="[field:typeurl/]" class="list-group-item">-->
-                <!--[field:typename/]-->
-                <!--</a>-->
-                <!--{/dede:channel}-->
-                <!--</div>-->
-                <div class="related-posts" style="padding-left: 50px">
-                    <h4 class="tittle">Pictures</h4>
-                    {dede:arclist typeid='30' row=2}
-                    <div class="related-post">
-                        <div class="related-post-left">
-                            <a href="[field:arcurl/]"><img src="[field:picname/]" class="img-responsive"/></a>
-                        </div>
-                        <div class="related-post-right">
-                            <h4><a href="[field:arcurl/]">[field:title function='cn_substr(@me,24)'/]</a></h4>
-                            <p class="autoWapp">
-                                [field:info function='cn_substr(@me,65)'/]
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    {/dede:arclist}
-                </div>
             </div>
             <div class="clearfix"></div>
         </div>

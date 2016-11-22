@@ -34,45 +34,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ol>
         </div>
         <div>
-            <div class="col-md-8 about-top-right">
-                <!--<div>-->
-                    <!--<table class="table table-hover">-->
-                        <!--<colgroup>-->
-                            <!--<col class="col-md-6">-->
-                            <!--<col class="col-md-2">-->
-                        <!--</colgroup>-->
-                        <!--<tbody>-->
-                        <!--{dede:list pagesize='10'}-->
-                        <!--<tr>-->
-                            <!--<td><a href="[field:arcurl/]" class="title">[field:title/]</a></td>-->
-                            <!--<td>[field:pubdate function="GetDateMK(@me)"/]</td>-->
-                        <!--</tr>-->
-                        <!--{/dede:list}-->
-                        <!--</tbody>-->
-                    <!--</table>-->
-                    <div class="list-group list-group-alternate jaylist">
-                        {dede:list pagesize='10'}
-                        <div class="list-group-item">
-                                <a href="[field:arcurl/]" style="font-size: 25px;" >[field:title/]</a>
-                            <p>
-                                [field:description function='cn_substr(@me,500)'/]
-                            </p>
-                        </div>
-                        {/dede:list}
-                    </div>
-                    <div class="clearfix"></div>
-                <!--</div>-->
-                <!--start-blog-pagenate-->
-                <div class="blog-pagenat">
-                    <ul>
-                        {dede:pagelist listitem="index,end,pre,next,pageno" listsize="2"/}
-                        <div class="clearfix"></div>
-                    </ul>
-                </div>
-                <!--//End-blog-pagenate-->
-            </div>
-            <div class="col-md-4 about-top-left">
-                <div class="categories" style="padding-left: 50px">
+            <div class="col-md-3 about-top-left">
+                <div class="categories">
                     <h4 class="tittle">{dede:field name='typename' /}</h4>
                     <ul>
                         {dede:channel type='son'}
@@ -91,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!--</a>-->
                 <!--{/dede:channel}-->
                 <!--</div>-->
-                <div class="related-posts" style="padding-left: 50px">
+                <div class="related-posts">
                     <h4 class="tittle">Pictures</h4>
                     {dede:arclist typeid='30' row=2}
                     <div class="related-post">
@@ -108,6 +71,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     {/dede:arclist}
                 </div>
+            </div>
+            <div class="col-md-9 about-top-right">
+                <!--<div>-->
+                <!--<table class="table table-hover">-->
+                <!--<colgroup>-->
+                <!--<col class="col-md-6">-->
+                <!--<col class="col-md-2">-->
+                <!--</colgroup>-->
+                <!--<tbody>-->
+                <!--{dede:list pagesize='10'}-->
+                <!--<tr>-->
+                <!--<td><a href="[field:arcurl/]" class="title">[field:title/]</a></td>-->
+                <!--<td>[field:pubdate function="GetDateMK(@me)"/]</td>-->
+                <!--</tr>-->
+                <!--{/dede:list}-->
+                <!--</tbody>-->
+                <!--</table>-->
+                <div class="list-group list-group-alternate jaylist">
+                    {dede:list pagesize='10'}
+                    <div class="list-group-item">
+                        <a href="[field:arcurl/]" style="font-size: 25px;" >[field:title/]</a>
+                        <p>
+                            [field:description function='cn_substr(@me,500)'/]
+                        </p>
+                    </div>
+                    {/dede:list}
+                </div>
+                <div class="clearfix"></div>
+                <!--</div>-->
+                <!--start-blog-pagenate-->
+                <div class="blog-pagenat">
+                    <ul>
+                        {dede:pagelist listitem="index,end,pre,next,pageno" listsize="2"/}
+                        <div class="clearfix"></div>
+                    </ul>
+                </div>
+                <!--//End-blog-pagenate-->
             </div>
             <div class="clearfix"></div>
         </div>
