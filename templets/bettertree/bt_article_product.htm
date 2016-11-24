@@ -106,24 +106,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         {dede:field name='typename' /}
                     </h3>
                     <ul class="nav nav-tabs jaylist" id="myTab">
-                        {dede:arclist typeid=~typeid~ row=1 orderby='id' orderway='desc' limit=0,1}
-                        <li ><a data-toggle="tab" href="#arclist[field:id /]">[field:title /]</a></li>
-                        {/dede:arclist} {dede:arclist typeid=~typeid~ row=3 orderby='id' orderway='desc' limit=1,3}
+                        {dede:list row="4" pagesize='4' orderby='id' orderway='desc' }
                         <li><a data-toggle="tab" href="#arclist[field:id /]">[field:title /]</a></li>
-                        {/dede:arclist}
+                        {/dede:list}
                     </ul>
                     <div class="tab-content" style="margin-top:5px;">
-                        {dede:list typeid=~typeid~ row=1 orderby='id' orderway='desc' limit=0,1}
+                        {dede:list row="4" pagesize='4' orderby='id' orderway='desc' }
                         <div id="arclist[field:id /]" class="tab-pane fade ">
                             <p class="autoWapp">[field:body /] </p>
                         </div>
-                        {/dede:list} {dede:list typeid=~typeid~ row=3 orderby='id' orderway='desc' limit=1,3}
-                        <div id="arclist[field:id /]" class="tab-pane fade">
-                            <p class="autoWapp">[field:body /] </p>
-                        </div>
                         {/dede:list}
-
-
                     </div>
                 </div>
                 <div class="clearfix"></div>
