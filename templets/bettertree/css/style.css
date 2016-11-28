@@ -9,6 +9,10 @@ html, body {
     cursor: pointer;
 }
 
+.table.table-condensed img{
+    cursor: pointer;
+}
+
 .zhezhao {
     width: 100%;
     height: 105%;
