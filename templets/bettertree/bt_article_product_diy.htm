@@ -38,7 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div>
                 <div class="col-md-3 about-top-left">
                     <div class="categories">
-                        <h4 class="tittle">Product</h4>
+                        <h4 class="tittle jaylist"><a style="color: #4e9659;" href="/a/Products">Product</a></h4>
                         <!--<ul>
                             {dede:channel type='son'}
                             <li>
@@ -107,21 +107,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     {dede:include filename="bt_Contact.htm"/}
                 </div>
                 <div class="col-md-9 about-top-right" style="padding-bottom: 30px">
-                    <h3 class="tittle autoWapp">
-                        {dede:field name='typename' /}
-                    </h3>
-                    <ul class="nav nav-tabs jaylist" id="myTab">
-                        {dede:list row="4" pagesize='4' orderby='id' orderway='desc' }
-                        <li><a data-toggle="tab" href="#arclist[field:id /]">[field:title /]</a></li>
-                        {/dede:list}
-                    </ul>
-                    <div class="tab-content" style="margin-top:5px;">
-                        {dede:list row="4" pagesize='4' orderby='id' orderway='desc' }
-                        <div id="arclist[field:id /]" class="tab-pane fade ">
-                            <p class="autoWapp">[field:body /] </p>
-                        </div>
-                        {/dede:list}
-                    </div>
+                    {dede:sql sql="SELECT id,typeid,title FROM `dede_archives` where typeid=~typeid~ ORDER BY `id` DESC LIMIT 0 , 1"}
+                    <h3 class="tittle autoWapp">[field:title /]</h3>
+                    {/dede:sql}
+                    {dede:sql sql="SELECT aid,typeid,body FROM `dede_addonarticle` where typeid=~typeid~ ORDER BY `aid` DESC LIMIT 0 , 1"}
+                    <p class="autoWapp">[field:body /]</p>
+                    {/dede:sql}
                 </div>
                 <div class="clearfix"></div>
             </div>

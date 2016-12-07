@@ -36,7 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div>
             <div class="col-md-3 about-top-left">
                 <div class="categories">
-                    <h4 class="tittle">{dede:field name='typename' /}</h4>
+                    {dede:include filename="bt_Current_nav.htm"/}
                     <ul>
                         {dede:channel type='son'}
                         <li>
@@ -54,23 +54,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!--</a>-->
                 <!--{/dede:channel}-->
                 <!--</div>-->
-                <div class="related-posts" >
-                    <h4 class="tittle">Pictures</h4>
-                    {dede:arclist typeid='30' row=2}
-                    <div class="related-post">
-                        <div class="related-post-left">
-                            <a href="[field:arcurl/]"><img src="[field:picname/]" class="img-responsive"/></a>
-                        </div>
-                        <div class="related-post-right">
-                            <h4><a href="[field:arcurl/]">[field:title function='cn_substr(@me,24)'/]</a></h4>
-                            <p class="autoWapp">
-                                [field:info function='cn_substr(@me,65)'/]
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    {/dede:arclist}
-                </div>
+                <!--<div class="related-posts" >-->
+                    <!--<h4 class="tittle">Pictures</h4>-->
+                    <!--{dede:arclist typeid='30' row=2}-->
+                    <!--<div class="related-post">-->
+                        <!--<div class="related-post-left">-->
+                            <!--<a href="[field:arcurl/]"><img src="[field:picname/]" class="img-responsive"/></a>-->
+                        <!--</div>-->
+                        <!--<div class="related-post-right">-->
+                            <!--<h4><a href="[field:arcurl/]">[field:title function='cn_substr(@me,24)'/]</a></h4>-->
+                            <!--<p class="autoWapp">-->
+                                <!--[field:info function='cn_substr(@me,65)'/]-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="clearfix"></div>-->
+                    <!--</div>-->
+                    <!--{/dede:arclist}-->
+                <!--</div>-->
+                {dede:include filename="bt_Contact.htm"/}
             </div>
             <div class="col-md-9 about-top-right" style="padding-bottom: 30px">
                 {dede:sql sql="SELECT id,typeid,title FROM `dede_archives` where typeid=~typeid~ ORDER BY `id` DESC LIMIT 0 , 1"}
